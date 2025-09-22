@@ -13,7 +13,7 @@
     --bg-panel: #2c2c2c;
     --text-primary: #e0e0e0;
     --text-secondary: #a0a0a0;
-    --accent-gold: #fdd835;
+    --accent-gold: #eedb30;
     --border-color: #444;
 }
 
@@ -103,7 +103,6 @@ body {
     background-color: var(--accent-gold);
 }
 
-/* --- Panel Kanan (Main) --- */
 .right-panel {
     width: 65%;
     padding: 40px;
@@ -164,4 +163,39 @@ body {
 
 .projects li strong {
     color: var(--accent-gold);
+}
+
+/*Handphone*/
+@media (max-width: 768px) {
+    .cv-container {
+        flex-direction: column;
+    }
+
+    .left-panel,
+    .right-panel {
+        width: 100%;
+    }
+
+    body {
+        padding: 20px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 0;
+    }
+
+    .cv-container {
+        border-radius: 0;
+    }
+
+    .right-panel h1 {
+        font-size: 2.5em;
+    }
+
+    .left-panel,
+    .right-panel {
+        padding: 25px;
+    }
 }
