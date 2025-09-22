@@ -1,0 +1,167 @@
+/* Mengimpor font dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/* --- Reset Dasar & Variabel Warna --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-dark: #1a1a1a;
+    --bg-panel: #2c2c2c;
+    --text-primary: #e0e0e0;
+    --text-secondary: #a0a0a0;
+    --accent-gold: #fdd835;
+    --border-color: #444;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+/* --- Kontainer Utama CV --- */
+.cv-container {
+    max-width: 1000px;
+    width: 100%;
+    background-color: var(--bg-panel);
+    display: flex;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* --- Panel Kiri (Aside) --- */
+.left-panel {
+    background-color: #212121;
+    width: 35%;
+    padding: 40px;
+    color: var(--text-primary);
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid var(--accent-gold);
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 30px;
+}
+
+.left-panel h2 {
+    color: var(--accent-gold);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+.contact ul,
+.skills ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.contact i {
+    color: var(--accent-gold);
+    width: 25px;
+    font-size: 1.1em;
+}
+
+.skills h3 {
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #444;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 100%;
+    background-color: var(--accent-gold);
+}
+
+/* --- Panel Kanan (Main) --- */
+.right-panel {
+    width: 65%;
+    padding: 40px;
+}
+
+.right-panel header {
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.right-panel h1 {
+    font-size: 3em;
+    margin: 0;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.right-panel .title {
+    font-size: 1.2em;
+    color: var(--accent-gold);
+    margin: 0;
+    font-weight: 300;
+}
+
+.right-panel section {
+    margin-bottom: 30px;
+}
+
+.right-panel h2 {
+    color: var(--accent-gold);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.job h3 {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    color: var(--text-primary);
+}
+
+.job-info {
+    color: var(--text-secondary);
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.right-panel ul {
+    padding-left: 20px;
+}
+
+.right-panel ul li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.projects li strong {
+    color: var(--accent-gold);
+}
