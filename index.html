@@ -4,13 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV Kreatif - Batman</title>
+    <title>Batman Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
+    <section class="landing-section" id="home">
+        <div class="landing-content">
+            <div class="logo-container">
+                <div class="bat-logo">
+                    <i class="fas fa-mask"></i>
+                </div>
+            </div>
+            <h1 class="main-title">BATMAN</h1>
+            <p class="subtitle">Guardian of Gotham City • Dark Knight • World's Greatest Detective</p>
+            <a href="#cv" class="cta-button">
+                <i class="fas fa-file-alt"></i> View My CV
+            </a>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
 
+    <section class="cv-section" id="cv">
     <div class="cv-container">
         <aside class="left-panel">
             <img src="https://www.rollingstone.com/wp-content/uploads/2023/02/Screen-Shot-2023-02-12-at-3.14.20-PM-copy.jpg?w=1581&h=1054&crop=1"
@@ -59,7 +77,7 @@
             </section>
 
             <section class="experience">
-                <h2>EXPRERIENCE</h2>
+                <h2>EXPERIENCE</h2>
                 <div class="job">
                     <h3>Vigilante & Pelindung Kota (Self-Employed)</h3>
                     <p class="job-info">Gotham City | Tahun Pertama - Sekarang</p>
@@ -95,6 +113,38 @@
             </section>
         </main>
     </div>
+    </section>
+
+    <script>
+        document.querySelector('.cta-button').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('#cv').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+
+        function animateSkillBars() {
+            const skillBars = document.querySelectorAll('.skill-level');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.width = entry.target.style.width;
+                    }
+                });
+            });
+
+            skillBars.forEach(bar => observer.observe(bar));
+        }
+
+        document.addEventListener('DOMContentLoaded', animateSkillBars);
+
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.landing-section');
+            const speed = scrolled * 0.5;
+            parallax.style.transform = `translateY(${speed}px)`;
+        });
+    </script>
 
 </body>
 
