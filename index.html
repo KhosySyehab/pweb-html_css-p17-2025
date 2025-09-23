@@ -10,6 +10,14 @@
 </head>
 
 <body>
+    <header class="navbar">
+        <a href="index.html" class="nav-logo">BATMAN</a>
+        <nav>
+            <a href="works.html">Achievements</a>
+            <a href="cv.html">View CV</a>
+        </nav>
+    </header>
+
     <section class="landing-section" id="home">
         <div class="landing-content">
             <div class="logo-container">
@@ -19,7 +27,7 @@
             </div>
             <h1 class="main-title">BATMAN</h1>
             <p class="subtitle">Guardian of Gotham City • Dark Knight • World's Greatest Detective</p>
-            <a href="#cv" class="cta-button">
+            <a href="cv.html" class="cta-button">
                 <i class="fas fa-file-alt"></i> View My CV
             </a>
         </div>
@@ -28,128 +36,5 @@
         </div>
     </section>
 
-    <section class="cv-section" id="cv">
-    <div class="cv-container">
-        <aside class="left-panel">
-            <img src="https://www.rollingstone.com/wp-content/uploads/2023/02/Screen-Shot-2023-02-12-at-3.14.20-PM-copy.jpg?w=1581&h=1054&crop=1"
-                alt="Batman Profile Picture" class="profile-pic">
-
-            <section class="contact">
-                <h2>CONTACT INFO</h2>
-                <ul>
-                    <li><i class="fas fa-envelope"></i> darkknight@gotham.net</li>
-                    <li><i class="fas fa-bullhorn"></i> Bat-Signal, GCPD</li>
-                    <li><i class="fas fa-map-marker-alt"></i> Gotham City</li>
-                    <li><i class="fab fa-linkedin"></i> linkedin.com/in/bruce-wayne</li>
-                </ul>
-            </section>
-
-            <section class="skills">
-                <h2>MAIN SKILLS</h2>
-                <h3>Intelligent and Tactic</h3>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 100%;"></div>
-                </div>
-                <h3>Technology and Industries</h3>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 98%;"></div>
-                </div>
-                <h3>Physical Skills</h3>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 100%;"></div>
-                </div>
-                <h3>Fear</h3>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 0%;"></div>
-                </div>
-            </section>
-        </aside>
-
-        <main class="right-panel">
-            <header>
-                <h1>BATMAN</h1>
-                <p class="title">Guardian of Gotham City</p>
-            </header>
-
-            <section class="profile">
-                <h2>PROFILE</h2>
-                <p>Seorang ahli strategi dan detektif yang berdedikasi tinggi dengan pengalaman lebih dari satu dekade
-                    dalam mitigasi krisis, intelijen, dan operasi keamanan tingkat tinggi di lingkungan urban yang
-                    paling menantang. Terbukti mampu menetralisir ancaman berskala besar. Bekerja secara independen di
-                    bawah tekanan ekstrem untuk menegakkan keadilan. Saya adalah pembalasan. Saya adalah malam. Saya
-                    Batman.</p>
-            </section>
-
-            <section class="experience">
-                <h2>EXPERIENCE</h2>
-                <div class="job">
-                    <h3>Vigilante & Pelindung Kota (Self-Employed)</h3>
-                    <p class="job-info">Gotham City | Tahun Pertama - Sekarang</p>
-                    <ul>
-                        <li>Merancang dan mengimplementasikan strategi keamanan proaktif yang berhasil menurunkan
-                            tingkat kejahatan terorganisir.</li>
-                        <li>Menetralisir ancaman domestik tingkat atas, termasuk The Joker, The Riddler, dan Ra's al
-                            Ghul.</li>
-                        <li>Melakukan investigasi mendalam terhadap kasus-kasus kriminal kompleks yang gagal
-                            diselesaikan oleh lembaga konvensional.</li>
-                        <li>Mengembangkan dan memelihara persenjataan teknologi non-letal untuk digunakan dalam operasi
-                            lapangan.</li>
-                    </ul>
-                </div>
-            </section>
-
-            <section class="projects">
-                <h2>ACHIEVEMENTS</h2>
-                <ul>
-                    <li><strong>Knightfall Protocol:</strong> Berhasil memulihkan stabilitas kota setelah
-                        pengambilalihan oleh teroris.</li>
-                    <li><strong>The Long Halloween:</strong> Membongkar dan melumpuhkan seluruh struktur keluarga
-                        kriminal Falcone dan Maroni.</li>
-                    <li><strong>Zero Year:</strong> Memainkan peran kunci dalam memulihkan infrastruktur Gotham setelah
-                        bencana besar.</li>
-                </ul>
-            </section>
-
-            <section class="education">
-                <h2>EDUCATION</h2>
-                <h3>Studi Global dalam Kriminologi & Seni Bela Diri</h3>
-                <p>Berbagai Mentor & Lokasi Rahasia di Seluruh Dunia</p>
-            </section>
-        </main>
-    </div>
-    </section>
-
-    <script>
-        document.querySelector('.cta-button').addEventListener('click', function(e) {
-            e.preventDefault();
-            document.querySelector('#cv').scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-
-        function animateSkillBars() {
-            const skillBars = document.querySelectorAll('.skill-level');
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.width = entry.target.style.width;
-                    }
-                });
-            });
-
-            skillBars.forEach(bar => observer.observe(bar));
-        }
-
-        document.addEventListener('DOMContentLoaded', animateSkillBars);
-
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const parallax = document.querySelector('.landing-section');
-            const speed = scrolled * 0.5;
-            parallax.style.transform = `translateY(${speed}px)`;
-        });
-    </script>
-
-</body>
-
+    </body>
 </html>
