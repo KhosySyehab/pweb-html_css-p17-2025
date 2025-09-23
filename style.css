@@ -89,9 +89,8 @@ html {
     align-items: center;
     justify-content: center;
     position: relative;
-    /* DIUBAH: URL gambar diganti dengan URL GIF */
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), 
-                url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjkxam9peTZkcHd2ZWE1NGt0aTVwOHhpN3JvZ3N1ejYzcGp2a3hoYyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/126ub9tbJhoXh6/giphy.gif') center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),
+        url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjkxam9peTZkcHd2ZWE1NGt0aTVwOHhpN3JvZ3N1ejYzcGp2a3hoYyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/126ub9tbJhoXh6/giphy.gif') center/cover;
     text-align: center;
     z-index: 1;
 }
@@ -237,13 +236,14 @@ html {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid var(--border-color);
-    
+
     --rotate: 0deg;
     --x: 0px;
     --y: 0px;
 
     transform: translate(var(--x), var(--y)) rotate(var(--rotate));
 }
+
 .project-card:hover {
     transform: translate(calc(var(--x)), calc(var(--y) - 10px)) rotate(var(--rotate));
     box-shadow: 0 15px 40px rgba(0, 191, 255, 0.2);
@@ -643,17 +643,18 @@ html {
         grid-template-columns: 1fr;
     }
 
-    .project-card:first-child,
-    .project-card:last-child,
-    .project-card:nth-child(2) {
-        transform: rotate(0deg) translateY(0);
+    /* --- PERBAIKAN DI SINI --- */
+    .project-card {
+        /* Mengatur ulang semua transformasi agar lurus dan di tengah */
+        transform: none;
     }
 
-    .project-card:first-child:hover,
-    .project-card:last-child:hover,
-    .project-card:nth-child(2):hover {
-        transform: translateY(-10px) rotate(0deg);
+    .project-card:hover {
+        /* Memberi efek hover yang simpel untuk mobile */
+        transform: translateY(-10px);
     }
+
+    /* --- AKHIR PERBAIKAN --- */
 }
 
 @media (max-width: 480px) {
@@ -709,46 +710,37 @@ html {
     background: var(--accent-blue);
 }
 
-
 @media (max-width: 768px) {
-
-    
     .works-grid {
-        flex-direction: column; 
-        align-items: center;    
-        gap: 25px;              
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
     }
 
-    
     .work-card {
-        width: 90%;             
-        max-width: 350px;       
+        width: 90%;
+        max-width: 350px;
     }
-    
-    
+
     .page-title {
         font-size: 2.5rem;
     }
 
     .cv-container {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
     }
 
-    
     .left-panel,
     .right-panel {
         padding: 30px;
     }
 
-    
     .profile-pic {
         width: 150px;
         height: 150px;
     }
 
-    
     .right-panel h1 {
         font-size: 2.5rem;
     }
-
 }
