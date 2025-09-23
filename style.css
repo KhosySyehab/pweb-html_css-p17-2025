@@ -89,6 +89,7 @@ html {
     align-items: center;
     justify-content: center;
     position: relative;
+    /* DIUBAH: URL gambar diganti dengan URL GIF */
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), 
                 url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjkxam9peTZkcHd2ZWE1NGt0aTVwOHhpN3JvZ3N1ejYzcGp2a3hoYyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/126ub9tbJhoXh6/giphy.gif') center/cover;
     text-align: center;
@@ -706,4 +707,48 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
     background: var(--accent-blue);
+}
+
+
+@media (max-width: 768px) {
+
+    
+    .works-grid {
+        flex-direction: column; 
+        align-items: center;    
+        gap: 25px;              
+    }
+
+    
+    .work-card {
+        width: 90%;             
+        max-width: 350px;       
+    }
+    
+    
+    .page-title {
+        font-size: 2.5rem;
+    }
+
+    .cv-container {
+        grid-template-columns: 1fr; 
+    }
+
+    
+    .left-panel,
+    .right-panel {
+        padding: 30px;
+    }
+
+    
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+    }
+
+    
+    .right-panel h1 {
+        font-size: 2.5rem;
+    }
+
 }
