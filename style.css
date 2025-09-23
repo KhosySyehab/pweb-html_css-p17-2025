@@ -89,8 +89,8 @@ html {
     align-items: center;
     justify-content: center;
     position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
-        url('https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3') center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), 
+                url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjkxam9peTZkcHd2ZWE1NGt0aTVwOHhpN3JvZ3N1ejYzcGp2a3hoYyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/126ub9tbJhoXh6/giphy.gif') center/cover;
     text-align: center;
     z-index: 1;
 }
