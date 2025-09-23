@@ -668,14 +668,12 @@ html {
     .project-card:first-child,
     .project-card:last-child,
     .project-card:nth-child(2) {
-        /* Meluruskan semua kartu */
         transform: rotate(0deg) translateY(0);
     }
 
     .project-card:first-child:hover,
     .project-card:last-child:hover,
     .project-card:nth-child(2):hover {
-        /* Efek hover standar untuk mobile */
         transform: translateY(-10px) rotate(0deg);
     }
 }
@@ -692,8 +690,8 @@ html {
     }
 
     .bat-logo {
-        width: 80px;
-        height: 80px;
+        width: 150px;
+        height: 93px;
         font-size: 2rem;
     }
 
