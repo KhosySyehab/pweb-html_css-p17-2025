@@ -95,20 +95,17 @@
     </section>
 
     <script>
-        // Script untuk animasi skill bars bisa tetap ada di sini
         document.addEventListener('DOMContentLoaded', () => {
             const skillBars = document.querySelectorAll('.skill-level');
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         const bar = entry.target;
-                        // Ambil nilai width dari style attribute
                         const targetWidth = bar.style.width; 
-                        // Set width ke nilai target untuk memicu animasi
                         bar.style.width = targetWidth; 
                     }
                 });
-            }, { threshold: 0.5 }); // Memicu saat 50% elemen terlihat
+            }, { threshold: 0.5 });
 
             skillBars.forEach(bar => observer.observe(bar));
         });

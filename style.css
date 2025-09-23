@@ -203,6 +203,7 @@ html {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    animation: slideInUp 0.8s ease-out;
 }
 
 .page-title {
@@ -225,7 +226,6 @@ html {
 .project-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* --- DIUBAH --- Jarak diperbesar agar kartu terlihat lebih kecil */
     gap: 50px;
 }
 
@@ -236,40 +236,17 @@ html {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid var(--border-color);
-}
+    
+    --rotate: 0deg;
+    --x: 0px;
+    --y: 0px;
 
+    transform: translate(var(--x), var(--y)) rotate(var(--rotate));
+}
 .project-card:hover {
-    transform: translateY(-10px);
+    transform: translate(calc(var(--x)), calc(var(--y) - 10px)) rotate(var(--rotate));
     box-shadow: 0 15px 40px rgba(0, 191, 255, 0.2);
 }
-
-.project-card:first-child {
-    transform: rotate(-4deg);
-}
-
-.project-card:last-child {
-    transform: rotate(4deg);
-}
-
-/* --- DITAMBAHKAN --- Membuat kartu tengah lebih tinggi */
-.project-card:nth-child(2) {
-    transform: translateY(-25px);
-}
-
-.project-card:first-child:hover {
-    transform: translateY(-10px) rotate(-4deg);
-}
-
-.project-card:last-child:hover {
-    transform: translateY(-10px) rotate(4deg);
-}
-
-/* --- DITAMBAHKAN --- Menyesuaikan hover untuk kartu tengah */
-.project-card:nth-child(2):hover {
-    transform: translateY(-35px);
-    /* Bergerak 10px ke atas dari posisi awal */
-}
-
 
 .card-image {
     width: 100%;

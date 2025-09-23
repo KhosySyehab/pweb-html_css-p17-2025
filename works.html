@@ -25,7 +25,7 @@
 
                 <div class="project-grid">
 
-                    <div class="project-card">
+                    <div class="project-card" style="--rotate: -5deg; --x: 0px; --y: 40px;">
                         <div class="card-image">
                             <img src="https://guides.gamepressure.com/batmanarkhamknight/gfx/word/427761511.jpg"
                                 alt="Knightfall Protocol">
@@ -49,7 +49,7 @@
                         </div>
                     </div>
 
-                    <div class="project-card">
+                    <div class="project-card" style="--rotate: 5deg; --x: 0px; --y: 40px;">
                         <div class="card-image">
                             <img src="https://www.comicbooktreasury.com/wp-content/uploads/2020/10/Batman-Zero-Year-Reading-Order.jpg"
                                 alt="Zero Year">
@@ -61,11 +61,48 @@
                         </div>
                     </div>
 
+                    <div class="project-card" style="--rotate: 5deg; --x: 170px; --y: 30px;">
+                        <div class="card-image">
+                            <img src="https://www.comingsoon.net/wp-content/uploads/sites/3/2025/01/Screenshot_2023-11-29_at_10.38.54_AM_1200x675-2025-01-07T123425.316.jpg"
+                                alt="Hush">
+                        </div>
+                        <div class="card-content">
+                            <h3>Hush</h3>
+                            <p>Berhadapan dengan musuh misterius Hush yang mengetahui identitas rahasia Batman, memaksa Batman melibatkan hampir semua musuh lamanya.</p>
+                        </div>
+                    </div>
+
+                    <div class="project-card" style="--rotate: -5deg; --x: 230px; --y: 30px;">
+                        <div class="card-image">
+                            <img src="https://comenian.org/wp-content/uploads/2024/04/bat.jpeg"
+                                alt="Court of Owls">
+                        </div>
+                        <div class="card-content">
+                            <h3>Court of Owls</h3>
+                            <p>Mengungkap rahasia organisasi rahasia yang telah mengendalikan Gotham selama berabad-abad, dan menghadapi para pembunuh Talon.</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
     </main>
 
-</body>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const skillBars = document.querySelectorAll('.skill-level');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const bar = entry.target;
+                        const targetWidth = bar.style.width; 
+                        bar.style.width = targetWidth; 
+                    }
+                });
+            }, { threshold: 0.5 });
+            skillBars.forEach(bar => observer.observe(bar));
+        });
+    </script>
 
+</body>
 </html>
