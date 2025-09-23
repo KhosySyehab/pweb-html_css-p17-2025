@@ -593,6 +593,17 @@ html {
     .project-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    /* --- PERBAIKAN DI SINI --- */
+    .project-card {
+        transform: none;
+    }
+
+    .project-card:hover {
+        transform: translateY(-10px);
+    }
+
+    /* --- AKHIR PERBAIKAN --- */
 }
 
 @media (max-width: 768px) {
@@ -643,18 +654,13 @@ html {
         grid-template-columns: 1fr;
     }
 
-    /* --- PERBAIKAN DI SINI --- */
     .project-card {
-        /* Mengatur ulang semua transformasi agar lurus dan di tengah */
         transform: none;
     }
 
     .project-card:hover {
-        /* Memberi efek hover yang simpel untuk mobile */
         transform: translateY(-10px);
     }
-
-    /* --- AKHIR PERBAIKAN --- */
 }
 
 @media (max-width: 480px) {
@@ -710,6 +716,7 @@ html {
     background: var(--accent-blue);
 }
 
+/* Duplikasi media query di bawah ini bisa dihapus jika tidak ada aturan spesifik lain */
 @media (max-width: 768px) {
     .works-grid {
         flex-direction: column;
